@@ -29,6 +29,15 @@ public class RoleService {
         return this.repository.save(role);
     }
 
+    public Role actualizar (Role role){
+        Optional <Role> rolefound = this.porId(role.getId());
+        if (rolefound.isEmpty()) {
+            return null;
+        }
+
+        return this.repository.save(role);
+    }
+
     public Role eliminar ( Long id){
         Optional<Role> roleFond = this.porId(id);
         if (roleFond.isEmpty()){
