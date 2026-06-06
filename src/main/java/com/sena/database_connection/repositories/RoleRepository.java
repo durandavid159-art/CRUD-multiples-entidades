@@ -8,5 +8,5 @@ import com.sena.database_connection.entities.Role;
 
 @Repository
 public interface RoleRepository extends JpaRepository <Role, Long>{
-   
+    
 }
