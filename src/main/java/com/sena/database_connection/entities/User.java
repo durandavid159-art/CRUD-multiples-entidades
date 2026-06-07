@@ -2,6 +2,8 @@ package com.sena.database_connection.entities;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -31,6 +33,7 @@ public class User {
 
     private String phone;
 
+    @JsonManagedReference
     @OneToOne(mappedBy = "user")
     private Profile profile;
 
